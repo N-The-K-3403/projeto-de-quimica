@@ -1,0 +1,31 @@
+
+
+.h11 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 35px;
+    font-size: 60px;
+
+  }
+  
+ .divisao {
+    display: flex;
+
+ } 
+
+ .divisao > div {
+    margin: 500x;
+    padding: 50px;
+ }
+
+ ul {
+
+   display: flex;
+   justify-content: space-between;
+ }
+
+ p {
+   font-size: 22px;
+   text-align: justify;
+ }

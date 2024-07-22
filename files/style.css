@@ -1,0 +1,464 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.snap-scroll {
+  display: flex;
+  scroll-snap-align: center;
+}
+
+
+
+.animatable {
+  /* initially hide animatable objects */
+visibility: hidden;
+
+  /* initially pause animatable objects their animations */
+  animation-play-state: paused;
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated.bounceInRight
+{
+transform: translateY(650px) translateX(700px);
+
+}
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(1000px) translateY(650px);
+  }
+  100% {
+    opacity: 1;
+    
+    transform: translateX(700px) translateY(650px);
+  }
+}
+.animated.animationDelay {
+  animation-delay: 0.4s;
+}
+.animated.animationDelayMed {
+  animation-delay: 1.2s;
+}
+.animated.animationDelayLong {
+  animation-delay: 1.6s;
+}
+.animated.fadeInUp {
+  animation-name: fadeInUp;
+}
+.animated.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+
+::-webkit-scrollbar-track
+{
+	border: 1px solid rgb(53, 53, 56);
+	background-color: #bcbcc0;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #313036;	
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+	background-color: #46465f;	
+}
+
+.space
+{
+margin: 100px;
+}
+
+:root{
+  --ff: "Kanit", sans-serif;
+  --colorp: #f9f9f9;
+  --colorp2: #fff;
+  --colora: #af37ff;
+  --colora2: #e75378;
+  --colorbody: #2a2a33;
+  --colors: #3d3f44;
+  --h1: bold 54px/60px var(--ff);
+  --h2: bold 36px/48px var(--ff);
+  --h3: bold 24px/36px var(--ff);
+  --links: 18px/18px var(--ff);
+  --p: 18px/30px var(--ff);
+  --p1: 24px/30px var(--ff);
+  --p2: 36px/48px var(--ff);
+  --subtext: 12px/20px var(--ff);
+  --transition: 0.3s ease-in-out;
+}
+
+.sessao1{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(img/banner.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+
+.introdução{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-top: 50px;
+  gap: 10px;
+  width: 60%;
+}
+.introdução#final{
+  display: flex;
+  flex-direction: column;
+
+  gap: 0px;
+  width: 60%;
+}
+.introdução div h1{
+  color: white;
+  font-size: 6rem;
+  padding-bottom: 50px;
+  font-weight: 600;
+}
+.introdução#final div h1{
+  color: white;
+  font-size: 6rem;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.introdução div h1 span{
+  color: rgb(196, 37, 211);
+}
+
+.introdução p{
+  color: white;
+  font-size: 2rem;
+}
+
+.introdução button{
+  height: 65px;
+  width: 25%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  border: solid 4px var(--azul-claro);
+  border-radius: 17px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.introdução button:hover{
+  background-color: white;
+  border: white 4px solid;
+  color: var(--azul-claro);
+}
+
+
+
+/* Colors & fonts variables */
+/* You just have to look at the Actual code */
+
+body {
+  background: linear-gradient(0deg, rgb(64, 41, 83) 0%, rgb(55, 55, 61) 100%);    
+  color: var(--colorp);
+}
+h1 {font: var(--h1);} h2 {font: var(--h2);} h3 {font: var(--h3);} p {font: var(--p);}
+
+
+
+/* Actual code */
+h1{margin: 0px;}
+.polite-card {
+  margin: 100px;  
+  margin-top: 150px;
+  max-width: min-content;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgb(72, 74, 88) 0%, rgb(103, 72, 117) 100%);    
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+/* text & button */
+.css-card {
+  padding: 20px;
+
+}
+.polite-card img {
+  border-radius: 0px;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  display: inline-block;
+  font: var(--p);
+  color: var(--colorp);
+  background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
+    linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%) border-box;
+  border: solid 2px transparent;
+  border-radius: 8px;
+  padding: 12px 24px;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  margin-top: 8px;
+  
+}
+
+
+.anim img{
+  height: 5em;
+  width: 30em;
+ transition: all 0.5s cubic-bezier(.39,.18,.21,1);
+}
+
+
+.anim img:hover{
+  height: 20em;
+  width: 30em;
+}
+
+
+.anim#ultimo img{
+  height: 7.5em;
+  width: 80vw;
+ transition: all 1s cubic-bezier(.39,.18,.21,1);
+}
+
+
+.anim#ultimo img:hover{
+  height: 30em;
+  width: 80vw;
+}
+
+
+
+
+
+/* nav dos caras */
+
+nav{
+
+  transform: translateY(-100px);
+  position: fixed;
+  width: 100%;
+  background: #424050af;
+  box-shadow: 0px 6px 48px 0px rgba(0, 0, 0, 0.329);
+  -webkit-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.329);
+  -o-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.329);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  transition: all 0.5s
+}
+nav:hover
+{
+  transform: translateY(-10px);
+}
+.alinhar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 30%;
+}
+
+.movendo-gradient {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, rgb(255, 8, 82) 0%, rgb(77, 5, 73) 50%, rgb(255, 8, 82) 100%);    
+  background-size: 200% 100%;
+  animation: moveGradient 3s linear infinite;
+}
+@keyframes moveGradient {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+.logos{
+  max-width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height:30px;
+  width:30px;
+  border:50px;
+}
+
+.logo-a{
+  transform: translateX(-475px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:30px;
+  width:30px;
+ 
+}
+.logos:hover path{
+  fill:red;
+}
+
+.logos path {
+  border: 100px;
+}
+
+.links-nav{
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul a{
+  text-decoration: none;
+}
+
+nav ul li{
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #fff; 
+  font-size: 1.1rem;
+}
+
+nav ul li:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+nav ul li:hover:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
+.buttons {
+  display: flex;
+  margin: 100px auto;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Repeating code */
+.buttons > *{
+  margin: auto;
+  cursor: pointer;
+  background: var(--colorbody);
+  text-decoration: none;
+  font: var(--h1);
+  padding: 12px 20px;
+  border-radius: 20px;
+  color: var(--colora);
+  transition: var(--transition);
+  }
+  
+.buttons > *:hover{
+  transition: var(--transition);
+  }
+
+.dashing-fill{
+  color: var(--colorbody);
+  background: linear-gradient(
+    270deg,
+    var(--colora),
+    var(--colora2),
+    var(--colora),
+    var(--colora2)
+  );
+  border: solid 10px var(--colorbody);
+  background-size: 300% 300%;
+  animation: bg 10s ease-in-out infinite;
+}@keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.dashing-fill:hover {
+  animation: bg 2s ease-in-out infinite;
+}
+
+.dashing{
+  background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
+  linear-gradient(
+    270deg,
+    var(--colora),
+    var(--colora2),
+    var(--colora),
+    var(--colora2)
+  ) border-box; 
+  border: solid 5px transparent;
+    all
+}
+.dashing:hover {
+  background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
+  linear-gradient(
+    270deg,
+    var(--colora2),
+    var(--colora),
+    var(--colora2),
+    var(--colora)
+  ) border-box; 
+all
+  
+}
